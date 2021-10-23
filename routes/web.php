@@ -42,6 +42,10 @@ Route::group(['middleware' => 'auth' ] , function(){
     route::resource('consults', App\Http\Controllers\ConsultsController::class)->except(['show']);
     route::resource('contract', App\Http\Controllers\ContractController::class)->except(['show']);
     route::resource('authorization', App\Http\Controllers\AuthorizationController::class)->except(['show']);
+    route::resource('address', App\Http\Controllers\AddressController::class)->except(['show']);
+    route::resource('messages', App\Http\Controllers\MessagesController::class)->except(['show']);
+    route::resource('subjectAuthorization', App\Http\Controllers\SubjectAuthorizationController::class)->except(['show']);
+
     
     
 });

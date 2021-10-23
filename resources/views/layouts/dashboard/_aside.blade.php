@@ -133,6 +133,20 @@
             <li><a href="{{ route('authorization.index') }}"><i class="fa fa-th"></i><span>التوكيلات</span></a></li>
         @endif
 
+        @if (auth()->user()->hasPermission('users_read'))
+        <li><a href="{{ route('address.index') }}"><i class="fa fa-th"></i><span>العناوين</span></a></li>
+    @endif
+
+    @if (auth()->user()->hasPermission('users_read'))
+    <li><a href="{{ route('messages.index') }}"><i class="fa fa-th"></i><span>الرسائل</span></a></li>
+@endif
+
+@if (auth()->user()->hasPermission('users_read'))
+<li><a href="{{ route('subjectAuthorization.index') }}"><i class="fa fa-th"></i><span>موضوع التوكيل</span></a></li>
+@endif
+        
+
+    
         </ul>
 
     </section>
